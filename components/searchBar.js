@@ -1,4 +1,4 @@
-class SearchBar extends HTMLElement {
+export class SearchBar extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -6,9 +6,7 @@ class SearchBar extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.innerHTML = `
-      <style>
-        /* Add component-specific styles here */
-      </style>
+ 
       <form id="search-form">
         <input type="text" placeholder="Search for books...">
         <button type="submit">Search</button>
@@ -16,5 +14,3 @@ class SearchBar extends HTMLElement {
     `;
   }
 }
-
-customElements.define("search-bar", SearchBar);
