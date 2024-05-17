@@ -154,23 +154,6 @@ function handleShowMoreButtonClick() {
   page += 1;
 }
 
-function handleListItemClick(event) {
-  const pathArray = Array.from(event.path || event.composedPath());
-  let active = null;
-
-  for (const node of pathArray) {
-    if (active) break;
-
-    if (node?.dataset?.preview) {
-      active = findActiveBook(node.dataset.preview);
-    }
-  }
-
-  if (active) {
-    showActiveBook(active);
-  }
-}
-
 // Function to apply search filters
 function applyFilters(filters) {
   return books.filter((book) => {
