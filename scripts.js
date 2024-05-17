@@ -1,6 +1,7 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from "./data.js";
 import { createBookElement, createOptionElement } from "./utils/helper.js";
 import { BookPreview } from "./components/BookPriview.js";
+import { SearchBar } from "./components/searchBar.js";
 customElements.define("search-bar", SearchBar);
 customElements.define("book-preview", BookPreview);
 BookPreview;
