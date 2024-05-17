@@ -6,9 +6,7 @@ class BookPreview extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.innerHTML = `
-      <style>
-        /* Add component-specific styles here */
-      </style>
+      
       <div class="book-preview">
         <img src="${this.getAttribute("image")}" alt="Book Image">
         <h3>${this.getAttribute("title")}</h3>
