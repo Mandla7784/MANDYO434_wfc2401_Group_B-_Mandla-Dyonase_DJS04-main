@@ -2,9 +2,7 @@ export class BookPreview extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-  }
 
-  set book(bookData) {
     this.shadowRoot.innerHTML = `
       <dialog class="overlay" data-list-active>
         <div class="overlay__preview"><img class="overlay__blur" data-list-blur src="${
