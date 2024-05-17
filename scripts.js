@@ -214,7 +214,7 @@ function showActiveBook(active) {
 initialize();
 setupEventListeners();
 
-function handleListItemClick() {
+const handleListItemClick = () => {
   const pathArray = Array.from(event.path || event.composedPath());
   let active = null;
 
@@ -231,4 +231,4 @@ function handleListItemClick() {
     const bookPreview = document.querySelector("book-preview");
     bookPreview.book = active;
   }
-}
+};
