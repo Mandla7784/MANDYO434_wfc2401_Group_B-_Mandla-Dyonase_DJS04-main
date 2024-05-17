@@ -34,24 +34,5 @@ export class BookPreview extends HTMLElement {
       .addEventListener("click", () => {
         handleListItemClick();
       });
-
-    function handleListItemClick() {
-      const pathArray = Array.from(event.path || event.composedPath());
-      let active = null;
-
-      for (const node of pathArray) {
-        if (active) break;
-
-        if (node?.dataset?.preview) {
-          active = findActiveBook(node.dataset.preview);
-        }
-      }
-
-      if (active) {
-        showActiveBook(active);
-        const bookPreview = document.querySelector("book-preview");
-        bookPreview.book = active;
-      }
-    }
   }
 }
