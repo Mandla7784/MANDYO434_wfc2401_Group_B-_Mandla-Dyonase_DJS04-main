@@ -1,12 +1,5 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from "./data.js";
 import { createBookElement, createOptionElement } from "./utils/helper.js";
-//imported ....
-
-import { BookPreview } from "./components/BookPriview.js";
-
-customElements.define("book-priview", BookPreview);
-
-// Update the handleListItemClick function
 
 let page = 1;
 let matches = books;
@@ -95,13 +88,11 @@ function setupEventListeners() {
       document.querySelector("[data-search-title]").focus();
     });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    document
-      .querySelector("[data-header-settings]")
-      .addEventListener("click", () => {
-        document.querySelector("[data-settings-overlay]").open = true;
-      });
-  });
+  document
+    .querySelector("[data-header-settings]")
+    .addEventListener("click", () => {
+      document.querySelector("[data-settings-overlay]").open = true;
+    });
 
   document.querySelector("[data-list-close]").addEventListener("click", () => {
     document.querySelector("[data-list-active]").open = false;
@@ -172,10 +163,9 @@ function handleListItemClick(event) {
 
   if (active) {
     showActiveBook(active);
-    const bookPreview = document.querySelector("book-preview");
-    bookPreview.book = active;
   }
 }
+
 // Function to apply search filters
 function applyFilters(filters) {
   return books.filter((book) => {

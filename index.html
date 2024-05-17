@@ -26,8 +26,9 @@
       rel="stylesheet"
     />
 
-    <script type="module" src="./scripts.js" defer></script>
+    <script type="module" src="./scripts.js"></script>
     <script type="module" src="./data.js"></script>
+      <script type="module" src="./components/BookPriview.js"></script>
    
   </head>
   <body>
@@ -97,7 +98,19 @@
       <button class="list__button" data-list-button></button>
     </main>
 
-     <book-priview id="book-priview-comp"></book-priview>
+
+    <dialog class="overlay" data-list-active>
+      <div class="overlay__preview"><img class="overlay__blur" data-list-blur src=""/><img class="overlay__image" data-list-image src=""/></div>
+      <div class="overlay__content">
+        <h3 class="overlay__title" data-list-title></h3>
+        <div class="overlay__data" data-list-subtitle></div>
+        <p class="overlay__data overlay__data_secondary" data-list-description></p>
+      </div>
+
+      <div class="overlay__row">
+        <button class="overlay__button overlay__button_primary" data-list-close>Close</button>
+      </div>
+    </dialog>
     <!---this is the book priview-->
 
 
