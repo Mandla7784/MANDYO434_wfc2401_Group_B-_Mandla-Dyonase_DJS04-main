@@ -109,8 +109,12 @@ function setupEventListeners() {
       document.querySelector("[data-settings-overlay]").open = true;
     });
 
-  document.querySelector("[data-list-close]").addEventListener("click", () => {
-    document.querySelector("[data-list-active]").open = false;
+  document.addEventListener("DOMContentLoaded", () => {
+    document
+      .querySelector("[data-list-close]")
+      .addEventListener("click", () => {
+        document.querySelector("[data-list-active]").open = false;
+      });
   });
 
   document
@@ -135,7 +139,7 @@ function setupEventListeners() {
   });
 }
 
-function init() {
+export function init() {
   initializeBookList();
   initializeSelectOptions();
   initializeTheme();

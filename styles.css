@@ -8,7 +8,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-dark:  255, 255, 255; 
+    --color-dark: 255, 255, 255;
     --color-light: 10, 10, 20;
   }
 }
@@ -23,7 +23,12 @@ body {
   min-width: 100%;
   font-family: Roboto, sans-serif;
   color: rgba(var(--color-dark), 0.9);
-  background: linear-gradient(0deg, rgba(var(--color-dark), 0.2), rgba(var(--color-dark), 0.1)), rgba(var(--color-light), 1);
+  background: linear-gradient(
+      0deg,
+      rgba(var(--color-dark), 0.2),
+      rgba(var(--color-dark), 0.1)
+    ),
+    rgba(var(--color-light), 1);
 }
 
 option {
@@ -246,9 +251,9 @@ option {
   font-weight: bold;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  color: rgba(var(--color-dark), 0.8)
+  color: rgba(var(--color-dark), 0.8);
 }
 
 .preview__author {
@@ -263,7 +268,8 @@ option {
   left: 0;
   width: 100%;
   border-width: 0;
-  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
   animation-name: enter;
   animation-duration: 0.6s;
   z-index: 10;
@@ -275,7 +281,7 @@ option {
     max-width: 30rem;
     left: 0%;
     top: 0;
-    border-radius: 8px;;
+    border-radius: 8px;
   }
 }
 
@@ -313,7 +319,6 @@ option {
 .overlay__button:hover {
   background-color: rgba(var((var(--color-blue))), 0.2);
 }
-
 
 .overlay__button_primary:hover {
   background-color: rgba(var(--color-blue), 0.8);
@@ -365,7 +370,7 @@ option {
   letter-spacing: -0.1px;
   max-width: 25rem;
   margin: 0 auto;
-  color: rgba(var(--color-dark), 0.8)
+  color: rgba(var(--color-dark), 0.8);
 }
 
 .overlay__blur {
@@ -382,20 +387,21 @@ option {
   top: 1.5m;
   left: calc(50% - 5rem);
   border-radius: 2px;
-  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
 .overlay__data {
   font-size: 0.9rem;
   display: -webkit-box;
   -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  color: rgba(var(--color-dark), 0.8)
+  color: rgba(var(--color-dark), 0.8);
 }
 
 .overlay__data_secondary {
-  color: rgba(var(--color-dark), 0.6)
+  color: rgba(var(--color-dark), 0.6);
 }
 
 .overlay__content {
