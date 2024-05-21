@@ -1,5 +1,5 @@
-import { books, BOOKS_PER_PAGE } from "./data.js";
-import { createBookPreviewElement } from "./scripts.js";
+import { books, BOOKS_PER_PAGE } from "../data.js";
+import { createBookPreviewElement } from "../scripts.js";
 let matches = books;
 let page = 1;
 //funtion to filter books when searching...

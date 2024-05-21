@@ -242,9 +242,10 @@ export class BookView extends HTMLElement {
   connectedCallback() {
     this.shadowRoot
       .querySelector("[data-list-close]")
-      .addEventListener("click", () => {
-        document.querySelector("[data-list-active]").open = false;
-      });
+      .addEventListener("click", () => this.closeOverlay.bind(this));
+  }
+  closeOverlay() {
+    document.querySelector("[data-list-active]").open = false;
   }
 }
 
