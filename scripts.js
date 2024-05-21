@@ -3,7 +3,7 @@ import { books, authors, genres, BOOKS_PER_PAGE } from "./data.js";
 let page = 1;
 let matches = books;
 
-function createBookPreviewElement({ author, id, image, title }) {
+export function createBookPreviewElement({ author, id, image, title }) {
   const element = document.createElement("button");
   element.classList.add("preview");
   element.setAttribute("data-preview", id);
@@ -39,18 +39,6 @@ function applyTheme(theme) {
   const lightColor = theme === "night" ? "10, 10, 20" : "255, 255, 255";
   document.documentElement.style.setProperty("--color-dark", darkColor);
   document.documentElement.style.setProperty("--color-light", lightColor);
-}
-
-function filterBooks({ title, author, genre }) {
-  return books.filter((book) => {
-    const genreMatch = genre === "any" || book.genres.includes(genre);
-    return (
-      (title.trim() === "" ||
-        book.title.toLowerCase().includes(title.toLowerCase())) &&
-      (author === "any" || book.author === author) &&
-      genreMatch
-    );
-  });
 }
 
 function initializeBookList() {
@@ -134,8 +122,6 @@ function setupEventListeners() {
       applyTheme(theme);
       document.querySelector("[data-settings-overlay]").open = false;
     });
-
-
 
   document.querySelector("[data-list-button]").addEventListener("click", () => {
     const fragment = document.createDocumentFragment();
