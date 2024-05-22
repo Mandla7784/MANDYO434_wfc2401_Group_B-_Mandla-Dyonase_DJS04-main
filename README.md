@@ -11,17 +11,16 @@ The main goals of the refactoring process were:
 1. **Improve code structure** using objects and functions
 2. **Implement abstraction** to hide complex details and expose only necessary parts
 3. **Enhance readability** through clear comments and documentation
-4. **Adhere to coding conventions** and styleguides
+4. **Adhere to coding conventions** and style guides
 
 ## Code Structure
 
 The refactored code consists of the following key components:
 
-### Objects
+### Components
 
-1. **Book**: Represents a book with properties such as title, author, genre, and description.
-2. **Author**: Represents an author with properties such as name and a list of authored books.
-3. **Genre**: Represents a genre with properties such as name and a list of books belonging to that genre.
+1. **SearchBar**: Component for searching books based on author, genre, and title.
+2. **BookPreview**: Component for displaying detailed information about a selected book.
 
 ### Functions
 
@@ -38,13 +37,13 @@ The refactored code utilizes abstraction to simplify the implementation and make
 
 ### Documentation and Comments
 
-Throughout the code, comments have been added to explain the purpose and functionality of each object and function. This includes:
+Throughout the code, comments have been added to explain the purpose and functionality of each component and function. This includes:
 
-- Describing the purpose and expected behavior of each object and function.
+- Describing the purpose and expected behavior of each component and function.
 - Explaining the input parameters and return values of functions.
 - Providing examples of how to use the functions.
 
-## Styleguides
+## Style Guides
 
 The refactored code follows established JavaScript and HTML coding conventions and best practices, such as:
 
@@ -61,16 +60,16 @@ This refactoring exercise has deepened my understanding of JavaScript programmin
 
 ## Conclusion
 
-The refactored Book Connect application demonstrates the benefits of using objects, functions, and abstraction to improve code structure and maintainability. By adhering to coding conventions and providing clear documentation, the code becomes more readable and easier to understand for both myself and future contributors. This refactoring exercise has been a valuable learning experience in applying JavaScript programming concepts to real-world problems.
+The refactored Book Connect application demonstrates the benefits of using components, functions, and abstraction to improve code structure and maintainability. By adhering to coding conventions and providing clear documentation, the code becomes more readable and easier to understand for both myself and future contributors. This refactoring exercise has been a valuable learning experience in applying JavaScript programming concepts to real-world problems.
 
 ## Resolved Issues and Tasks Overview
 
 ### Resolved Issues
 
 1. Identified areas for abstraction and modularization to improve code structure.
-2. Implemented objects and functions to enhance flexibility and maintainability.
+2. Implemented components and functions to enhance flexibility and maintainability.
 3. Documented code with clear comments to explain functionality.
-4. Ensured adherence to coding conventions and styleguides for consistency.
+4. Ensured adherence to coding conventions and style guides for consistency.
 
 ### Tasks Completed
 
@@ -79,13 +78,13 @@ The refactored Book Connect application demonstrates the benefits of using objec
 2. **Plan Refactoring**:
    - Identified sections for abstraction and modularization.
 3. **Implement Abstraction**:
-   - Defined objects for books, authors, and genres.
+   - Defined components for SearchBar and BookPreview.
    - Created functions for rendering book lists, filtering books, and handling user interactions.
 4. **Enhance Functionality**:
    - Ensured the application remains fully functional post-refactoring.
 5. **Documentation and Comments**:
-   - Added clear comments and documentation to explain code blocks, functions, and objects.
-6. **Adherence to Styleguides**:
+   - Added clear comments and documentation to explain code blocks, functions, and components.
+6. **Adherence to Style Guides**:
    - Followed established coding conventions and best practices for readability and maintainability.
 
 By addressing these tasks and resolving the identified issues, the Book Connect application has been successfully refactored to enhance its structure, maintainability, and extensibility.
